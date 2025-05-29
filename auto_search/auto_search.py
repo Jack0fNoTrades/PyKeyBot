@@ -3,7 +3,7 @@ import time
 import random
 from util.util import click, refresh
 
-chrome = [540, 430]
+chrome = [540, 420]
 safari = [540, 350]
 
 
