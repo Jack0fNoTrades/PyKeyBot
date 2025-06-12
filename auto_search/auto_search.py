@@ -4,7 +4,7 @@ import random
 from util.util import click, refresh
 
 chrome = ["chrome", 540, 420]
-safari = ["safari", 540, 440, 540, 350]
+safari = ["safari", 540, 450, 540, 350]
 
 
 # Although there are numerous front end applications that does this, they are not able to detect
