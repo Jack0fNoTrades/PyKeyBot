@@ -12,6 +12,7 @@ desired_x_start_2 = 690
 desired_y_start_2 = 665
 x_factor_2 = 80
 y_factor_2 = 10
+timeout = 200
 
 
 def play2048():
@@ -41,13 +42,16 @@ def execute():
     reload()
     # wait for loading to finish
     wait()
-    counter = 0
+    win_counter = 0
+    rounds_played = 0
     # we only need 3 successful games per run
-    while counter < 3:
+    # add timeout in case detection doesn't work(so should not have to update detection target ever again)
+    while win_counter < 3 and rounds_played < timeout:
+        rounds_played += 1
         play2048()
         # detect if the most recent game is successful
         if pyautogui.locateOnScreen("2SB.png", grayscale=True, confidence=0.8) is not None:
-            counter += 1
+            win_counter += 1
         # reload game
         click(desired_x_start_2, desired_y_start_2, x_factor_2, y_factor_2)
         # Add additional wait in response to the new version of 2048 sometimes breaking the program
