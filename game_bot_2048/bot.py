@@ -12,7 +12,7 @@ desired_x_start_2 = 690
 desired_y_start_2 = 665
 x_factor_2 = 80
 y_factor_2 = 10
-timeout = 200
+timeout = 50
 
 
 def play2048():
@@ -50,7 +50,7 @@ def execute():
         rounds_played += 1
         play2048()
         # detect if the most recent game is successful
-        if pyautogui.locateOnScreen("2SB.png", grayscale=True, confidence=0.8) is not None:
+        if pyautogui.locateOnScreen("2SB.png", grayscale=True, confidence=0.5) is not None:
             win_counter += 1
         # reload game
         click(desired_x_start_2, desired_y_start_2, x_factor_2, y_factor_2)
