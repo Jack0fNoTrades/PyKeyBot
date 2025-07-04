@@ -11,7 +11,7 @@ safari = ["safari", 540, 450, 540, 350]
 # events that are happening on screen, and some of them may not even have the option of randomized
 # refresh intervals.
 def auto_search(low, high, browser):
-    while pyautogui.locateOnScreen("search_hit.png", grayscale=True, confidence=0.8) is None:
+    while pyautogui.locateOnScreen("search_hit.png", grayscale=True, confidence=0.5) is None:
         refresh()
         # wait a bit between searches
         time.sleep(random.randint(low, high))

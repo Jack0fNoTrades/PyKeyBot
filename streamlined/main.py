@@ -18,7 +18,7 @@ def main():
     execute()
     click(425, 60, 2, 2)
     time.sleep(0.2)
-    auto_search(7, 10, chrome)
+    auto_search(10, 12, chrome)
     time.sleep(0.25)
     click(safari_icon[0], safari_icon[1], 3, 3)
     time.sleep(0.2)
