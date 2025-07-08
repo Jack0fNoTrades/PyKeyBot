@@ -7,11 +7,11 @@ chrome = ["chrome", 540, 420]
 safari = ["safari", 540, 450, 540, 350]
 
 
-# Although there are numerous front end applications that does this, they are not able to detect
+# Although there are numerous auto-refreshers available, they are not able to detect
 # events that are happening on screen, and some of them may not even have the option of randomized
 # refresh intervals.
 def auto_search(low, high, browser):
-    while pyautogui.locateOnScreen("search_hit.png", grayscale=True, confidence=0.5) is None:
+    while pyautogui.locateOnScreen("search_hit.png", grayscale=True, confidence=0.3) is None:
         refresh()
         # wait a bit between searches
         time.sleep(random.randint(low, high))
